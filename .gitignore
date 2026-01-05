@@ -9,3 +9,5 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+content/99_Archives/2026/*
