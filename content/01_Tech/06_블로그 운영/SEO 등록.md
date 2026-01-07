@@ -5,30 +5,26 @@
 
 ![https://wpadvancedads.com/wp-content/uploads/2024/07/google-search-console-html-tag.png](https://tse1.mm.bing.net/th/id/OIP.sor15fAQtYlhypMR5DVhzgHaE3?w=474&h=379&c=7&p=0)
 
-### ① Search Console 접속
+### 1.  Search Console 접속
 
 - [https://search.google.com/search-console](https://search.google.com/search-console)
 
-### ② 속성 추가
+### 2.  도메인 VS URL 접두어
 
-**권장:** `URL 접두어`
+URL 접두어 클릭 -> 내 도메인 입력
 
-`https://https://second-brain-7tz.pages.dev/`
+### 3. HTML 파일 인증
 
-### ③ 소유권 확인 (가장 쉬운 방법)
+![[Pasted image 20260107221745.png]]
 
-- **HTML meta 태그 방식**
+> [!tip]  GPT도 안알려줌 !! 핵 중요 !!
+ 이렇게 HTML 을 다운로드 받아서 루트 경로에 넣으라고 한다.
+ GPT는 계속 루트 폴더에 넣어라, static 폴더 만들어서 넣어라. 
+ 이런 헛소리 하고 있다.
 
-Search Console에서 제공하는 태그:
-
-`<meta name="google-site-verification" content="xxxx" />`
-
-➡ Quartz 설정 위치:  
-`quartz.config.ts`
-
-`head: {   meta: [     { name: "google-site-verification", content: "xxxx" },   ], }`
-
-배포 후 확인 클릭.
+ 
+ 
+ 
 
 ### ④ Sitemap 등록
 
