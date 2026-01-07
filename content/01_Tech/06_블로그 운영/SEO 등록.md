@@ -22,41 +22,55 @@ URL 접두어 클릭 -> 내 도메인 입력
  GPT는 계속 루트 폴더에 넣어라, static 폴더 만들어서 넣어라. 
  이런 헛소리 하고 있다.
 
- 
- 
- 
+ 헛소리의 원인 : 루트 폴더에 넣어야함. 하지만 content 폴더에서는 HTML을 인식하지 않는다.
+ 우리는 깃허브에 업로드 할 때 public 폴더는 업로드 되지 않는다.
+ quartz폴더를 기준으로 빌드해서 public 폴더가 만들어지는 듯 한데, 이 과정에서 quartz 내부의 static 폴더는 그대로 public에 옮겨진다.
 
-### ④ Sitemap 등록
+그러면 static 폴더 안에 html을 넣으면 될까?
+아니다 그러면 https://예시도메인/static/~~~~.html 에 업로드 된다.
 
-Search Console → **Sitemaps**
+그래서 수없이 인증을 실패하면서 알아낸 것은 "static 폴더 내부의 html 을 밖으로 꺼낸다." 이다.
+![[Pasted image 20260107224547.png]]
 
-`/sitemap.xml`
+robots.txt도 이후의 robots.txt도 옮겨야하기 때문에 미리 넣어두자.
 
-## 2. robots.txt + google analytics
-### 1. robots.txt 설정 (검색엔진 제어)
+Cloud flare 설정 내부에서 npx quartz build 만 되어 있던 것에서 뒤에 
+cp quartz/static/`*.html public/ 을 붙여준다.
 
-#### ① 기본 권장 robots.txt
+![[Pasted image 20260107222919.png]]
 
-Quartz 프로젝트 루트에 파일 생성:
+이를 통해 html 파일이 루트 폴더로 이동이 되면서 성공적으로 인증을 받을 수 있다. 
+'내 귀한 시간 ㅜㅜㅜㅜㅜ'
 
-`robots.txt`
+### 4. Sitemaps 인증 (진행 중)
+`https://내 도메인/sitemaps.xml`
 
-내용:
+이 곳에 접속이 된다면 별다른 처리 없이 Search Console의 Sitemaps에 sitemap.xml을 추가하면 된다.
 
-`User-agent: * Allow: /  Sitemap: https://your-domain.com/sitemap.xml`
 
-이 설정이면:
+2026-01-07  22:37
+진행 완료된다면 수정 예정!
 
-- Google / Naver 모두 크롤링 허용
-    
-- sitemap 위치 명시 → 색인 안정화
-#### ③ 배포 후 확인
 
-브라우저에서:
+### 5. Robots.txt 설정 (진행 중)
 
-`https://your-domain.com/robots.txt`
+https://developers.google.com/crawling/docs/robots-txt/create-robots-txt?hl=ko&_gl=1*bwoh9w*_up*MQ..*_ga*MTg1NTY3MDE1Mi4xNzY3NzkzMTc2*_ga_SM8HXJ53K2*czE3Njc3OTMxNzYkbzEkZzAkdDE3Njc3OTMxNzYkajYwJGwwJGgw#learn_robots_txt_syntax
 
-열리면 정상
+우리 로봇님께서 더 쉽게 크롤링해서 가져오실 수 있도록 robots.txt를 만들어서 넣어야한다..
+
+```
+User-agent: *
+Allow: /
+
+Sitemap: https://second-brain-7tz.pages.dev/sitemap.xml
+```
+
+저는 이렇게 간단하게 넣었다. (일단 되는지 확인 용)
+넣는 곳은 루트 경로에 넣어야한다고 하길래 html 파일 넣는 static에 넣었다.
+이후 Cloudflare을 수정하였다.
+
+![[Pasted image 20260107224647.png]]
+
 
 ---
 
