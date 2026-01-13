@@ -51,8 +51,11 @@ cp quartz/static/`*.html public/ 을 붙여준다.
 2026-01-07  22:37
 진행 완료된다면 수정 예정!
 
+2026-01-09 17:32
+무수히 많은 재시도, xml문제인 듯 싶어 로컬 환경과 cloudflare환경 sitemap 비교까지 진행했지만 결론을 못찾음.
+reddit에서는 일부 오래걸린다고 기다려야한다그래서 fetch되지 않은 상태로 조금 둬야할 듯함.
 
-### 5. Robots.txt 설정 (진행 중)
+### 5. Robots.txt 설정
 
 https://developers.google.com/crawling/docs/robots-txt/create-robots-txt?hl=ko&_gl=1*bwoh9w*_up*MQ..*_ga*MTg1NTY3MDE1Mi4xNzY3NzkzMTc2*_ga_SM8HXJ53K2*czE3Njc3OTMxNzYkbzEkZzAkdDE3Njc3OTMxNzYkajYwJGwwJGgw#learn_robots_txt_syntax
 
@@ -70,6 +73,13 @@ Sitemap: https://second-brain-7tz.pages.dev/sitemap.xml
 이후 Cloudflare을 수정하였다.
 
 ![[Pasted image 20260107224647.png]]
+
+좌측 사이드 바에서 Setting을 눌러 적용확인을 할 수 있다.
+![[Pasted image 20260109173351.png]]
+
+robots.txt가 valid로 수집되고 있는 것을 확인할 수 있었다.
+
+완료!!
 
 
 ---
