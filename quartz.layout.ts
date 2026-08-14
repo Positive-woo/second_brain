@@ -21,6 +21,16 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "Daily AI News 최신 글",
+        limit: 3,
+        showTags: false,
+        linkToMore: "02_Daily_AI_News",
+        filter: (f) => (f.frontmatter?.tags ?? []).includes("daily-news"),
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),

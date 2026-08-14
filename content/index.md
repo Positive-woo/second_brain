@@ -14,6 +14,14 @@ title: "긍정우의 Second Brain"
 ## 💻 프로젝트
 
 <div class="card-grid">
+  <a href="/01_Tech/08_openclaw/2026-08-15-ai-news-workflow" class="card">
+    <div class="card-thumb">🦀</div>
+    <div class="card-body">
+      <h3>Openclaw</h3>
+      <p>Openclaw로 Obsidian 블로그 함께 만들기</p>
+      <span class="card-tag">진행중</span>
+    </div>
+  </a>
   <a href="/01_Tech/02_Toy_Project/26_06_음향EQ추천도제안/01_음향 믹서 내부의 EQ 제어 기획" class="card">
     <div class="card-thumb">🎚️</div>
     <div class="card-body">
@@ -30,20 +38,27 @@ title: "긍정우의 Second Brain"
       <span class="card-tag">완료</span>
     </div>
   </a>
-  <a href="/01_Tech/06_블로그 운영/Google_Search Console 등록" class="card">
-    <div class="card-thumb">🪧</div>
-    <div class="card-body">
-      <h3>Google Search</h3>
-      <p>Obsidian으로 블로그 만들기</p>
-      <span class="card-tag">진행중</span>
-    </div>
-  </a>
   <a href="/01_Tech/02_Toy_Project/26_01_church_toy_project/음악의 BPM 과 Key(조성) 찾기" class="card">
     <div class="card-thumb">🎼</div>
     <div class="card-body">
       <h3>음악 BPM & Key 탐지</h3>
       <p>음악의 BPM과 조성을 자동으로 분석</p>
       <span class="card-tag">완료</span>
+    </div>
+  </a>
+</div>
+
+---
+
+## 📰 Daily AI News
+
+<div class="card-grid">
+  <a href="/02_Daily_AI_News/" class="card">
+    <div class="card-thumb">🗞️</div>
+    <div class="card-body">
+      <h3>Daily AI News</h3>
+      <p>매일 고른 AI 기사와 짧은 생각 기록</p>
+      <span class="card-tag">업데이트 중</span>
     </div>
   </a>
 </div>

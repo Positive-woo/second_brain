@@ -32,7 +32,7 @@ OpenClaw 개인 에이전트 작업 환경을 점검하고, Telegram 직결 대�
 
 ### 핵심
 
-- 현재 작업 디렉터리는 `/Users/positive_woo/.openclaw/workspace`
+- 현재 작업 디렉터리는 `workspace 루트`
 - `.openclaw`는 숨김 폴더라 기본 Finder/ls 설정에 따라 보이지 않을 수 있음
 - `boot.md` 소문자 파일은 없고, 워크스페이스 루트에 `BOOT.md`가 존재함
 - 워크스페이스 상태 파일 기준:
@@ -55,7 +55,7 @@ OpenClaw 개인 에이전트 작업 환경을 점검하고, Telegram 직결 대�
 - OpenClaw 내부 상태 파일 존재 확인
   - `.openclaw/workspace-state.json`
 - 개인 문서화 지침 확인
-  - `/Users/positive_woo/Documents/openclaw/BOOT.md`
+  - `Documents/openclaw/BOOT.md`
   - 새 문서 생성 우선
   - overwrite 금지
   - 템플릿 기반 작성
@@ -67,7 +67,7 @@ OpenClaw 개인 에이전트 작업 환경을 점검하고, Telegram 직결 대�
 2. main agent 연결 인식 테스트
    - `talk to main` 요청에 대해 현재 이 대화가 이미 main agent와 연결되어 있음을 확인
 3. 워크스페이스 경로 확인 테스트
-   - 실제 작업 위치가 `/Users/positive_woo/.openclaw/workspace`인지 확인
+   - 실제 작업 위치가 `workspace 루트`인지 확인
 4. 숨김 폴더 확인 테스트
    - `.openclaw` 디렉터리가 실제로 존재함을 확인
 5. 부트 파일 확인 테스트

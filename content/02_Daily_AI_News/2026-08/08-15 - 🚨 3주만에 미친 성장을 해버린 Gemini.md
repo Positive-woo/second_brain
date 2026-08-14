@@ -1,6 +1,6 @@
 ---
 title: "🚨 3주만에 미친 성장을 해버린 Gemini"
-date: "2026-08-14"
+date: "2026-08-15"
 tags: [daily-news, curated]
 source: "JoCoding Posts"
 source_url: "https://www.youtube.com/post/UgkxaGt4yTqzrEmWfIZRF-fsOMC_o7VvxZHf"
