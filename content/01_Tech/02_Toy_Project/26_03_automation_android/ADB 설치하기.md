@@ -1,3 +1,7 @@
+---
+tags: [android, automation, setup]
+---
+
 
 ## 1. Android Developers
 

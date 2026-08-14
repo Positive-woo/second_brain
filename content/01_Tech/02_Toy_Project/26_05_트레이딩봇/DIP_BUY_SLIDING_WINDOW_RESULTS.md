@@ -1,3 +1,7 @@
+---
+tags: [project, trading, quant]
+---
+
 # DipBuyStrategy 손절×익절 슬라이딩 윈도우 검증 결과
 
 `DipBuyStrategy`(5시간 내 -5% 하락 시 매수, FreqAI 없음, `user_data/strategies/dip_buy_strategy.py`)의

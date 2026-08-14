@@ -1,3 +1,7 @@
+---
+tags: [ML, evaluation, bigdata]
+---
+
 
 ```markdown
 작성 일자 : 2026-03-19

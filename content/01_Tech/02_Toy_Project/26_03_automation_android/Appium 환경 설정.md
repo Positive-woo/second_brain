@@ -1,3 +1,7 @@
+---
+tags: [android, automation, setup]
+---
+
 
 ## Node.js 설치
 https://nodejs.org/ko

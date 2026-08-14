@@ -1,3 +1,7 @@
+---
+tags: [ML, bigdata]
+---
+
 ![[Pasted image 20260309222418.png]]
 
 마진 최대한 남기기

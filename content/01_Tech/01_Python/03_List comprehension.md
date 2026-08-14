@@ -1,3 +1,7 @@
+---
+tags: [python, programming]
+---
+
 #listcomprehension
 ## 개요
 list comprehension는 기존 list를 가지고 새로운 list를 더 짧고 간결하고 빠르게 생성하는 문법이다. 

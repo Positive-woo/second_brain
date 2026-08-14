@@ -1,3 +1,7 @@
+---
+tags: [project, openclaw, blog]
+---
+
 # OpenClaw를 써보려는 이유와 내가 연결한 방식
 
 ## 요약

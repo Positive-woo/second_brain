@@ -1,3 +1,7 @@
+---
+tags: [ML, clustering, bigdata]
+---
+
 - 비지도 학습 방식
 - 군집 분석
 

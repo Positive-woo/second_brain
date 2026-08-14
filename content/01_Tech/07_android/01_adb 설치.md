@@ -1,3 +1,7 @@
+---
+tags: [android, setup]
+---
+
 
 ```markdown
 작성 일자 : 2026-03-17

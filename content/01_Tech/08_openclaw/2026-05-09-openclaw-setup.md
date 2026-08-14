@@ -1,3 +1,7 @@
+---
+tags: [project, openclaw, setup]
+---
+
 ```markdown
 작성 일자 : 2026-05-09
 ```

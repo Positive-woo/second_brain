@@ -1,3 +1,7 @@
+---
+tags: [project, music, AI, openai, church-project]
+---
+
 
 ```markdown
 작성 일자 : 2026-02-18

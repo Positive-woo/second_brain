@@ -1,3 +1,7 @@
+---
+tags: [project, openclaw, AI]
+---
+
 # NACY 페르소나 설계
 
 ## 개요

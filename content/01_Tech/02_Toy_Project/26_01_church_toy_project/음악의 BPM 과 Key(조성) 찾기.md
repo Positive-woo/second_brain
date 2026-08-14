@@ -1,3 +1,7 @@
+---
+tags: [project, music, audio, church-project]
+---
+
 ```markdown
 작성 일자 : 2026-01-05
 ```

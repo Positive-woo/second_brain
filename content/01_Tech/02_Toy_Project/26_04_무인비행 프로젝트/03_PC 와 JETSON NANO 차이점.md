@@ -1,3 +1,7 @@
+---
+tags: [project, drone, embedded, jetson]
+---
+
 # **1. 추론 모델 차이**
 
 ## **PC 환경**

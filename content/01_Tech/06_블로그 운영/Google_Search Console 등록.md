@@ -1,3 +1,7 @@
+---
+tags: [blog, setup, SEO]
+---
+
 
 ## 1. Google 검색 등록 (Google Search Console)
 

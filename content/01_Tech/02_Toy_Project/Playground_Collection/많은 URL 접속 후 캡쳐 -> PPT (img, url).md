@@ -1,3 +1,7 @@
+---
+tags: [project, automation]
+---
+
 
 ```markdown
 작성 일자 : 2026-01-06
