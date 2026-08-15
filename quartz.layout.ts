@@ -1,5 +1,12 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { FileTrieNode } from "./quartz/util/fileTrie"
+
+const explorerMapFn = (node: FileTrieNode) => {
+  if (node.isFolder && node.slugSegment === "02_Daily_AI_News") {
+    node.displayName = node.slugSegment
+  }
+}
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -42,7 +49,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ mapFn: explorerMapFn }),
   ],
   right: [
     Component.Graph(),
@@ -66,7 +73,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ mapFn: explorerMapFn }),
   ],
   right: [],
 }
