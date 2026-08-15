@@ -2,7 +2,7 @@
 title: "긍정우의 Second Brain"
 ---
 
-**긍정우**의 제 2의 뇌에 오신 것을 환영합니다.  
+**긍정우**의 제 2의 뇌에 오신 것을 환영합니다.
 
 궁금하고 관심 있는 것들을 AI와 함께 기록하고 정리합니다. 🧑‍💻
 
@@ -11,6 +11,12 @@ title: "긍정우의 Second Brain"
 <div class="index-global-graph">
   <div class="graph-container" data-cfg='{"drag":true,"zoom":true,"depth":-1,"scale":0.9,"repelForce":0.5,"centerForce":0.3,"linkDistance":35,"fontSize":0.65,"opacityScale":1,"showTags":true,"removeTags":[],"focusOnHover":true,"enableRadial":true}'></div>
 </div>
+
+## 📰 Daily AI News
+
+<div id="daily-ai-news-home"></div>
+
+---
 
 ## 💻 프로젝트
 
@@ -48,12 +54,6 @@ title: "긍정우의 Second Brain"
     </div>
   </a>
 </div>
-
----
-
-## 📰 Daily AI News
-
-<div id="daily-ai-news-home"></div>
 
 ---
 
