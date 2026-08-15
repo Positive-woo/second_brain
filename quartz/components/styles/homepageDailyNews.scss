@@ -26,11 +26,11 @@
 }
 
 .daily-ai-news-body {
-  padding: 0.9rem 1rem 1rem;
+  padding: 0.8rem 0.9rem 0.9rem;
 
   h3 {
     margin: 0 0 0.45rem;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     line-height: 1.4;
     color: var(--dark);
   }
@@ -47,7 +47,7 @@
 
 .daily-ai-news-summary {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   color: var(--gray);
   line-height: 1.5;
 }
@@ -62,13 +62,13 @@
   border-radius: 999px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 720px) {
   .daily-ai-news-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 520px) {
   .daily-ai-news-grid {
     grid-template-columns: 1fr;
   }

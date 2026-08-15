@@ -4,7 +4,7 @@ title: "긍정우의 Second Brain"
 
 **긍정우**의 제 2의 뇌에 오신 것을 환영합니다.  
 
-이 곳은 궁금 하고 관심 있는 것들을 AI와 함께 기록하고 정리합니다.
+궁금하고 관심 있는 것들을 AI와 함께 기록하고 정리합니다. 🧑‍💻
 
 ---
 
@@ -53,32 +53,7 @@ title: "긍정우의 Second Brain"
 
 ## 📰 Daily AI News
 
-<div class="card-grid">
-  <a href="/02_Daily_AI_News/2026-08/08-15 - 삼성 헬스 AI 모델, 웨어러블 생체신호 데이터를 분석" class="card">
-    <div class="card-thumb">🗞️</div>
-    <div class="card-body">
-      <h3>삼성 헬스 AI 모델</h3>
-      <p>웨어러블 생체신호를 학습하는 헬스케어 AI 모델 정리</p>
-      <span class="card-tag">최신 글</span>
-    </div>
-  </a>
-  <a href="/02_Daily_AI_News/2026-08/08-15 - 구글 AI 헬스 코치, 애보트 혈당 데이터를 활용" class="card">
-    <div class="card-thumb">🧬</div>
-    <div class="card-body">
-      <h3>구글 AI 헬스 코치</h3>
-      <p>혈당 데이터를 붙인 Gemini 기반 건강 코칭 흐름</p>
-      <span class="card-tag">최신 글</span>
-    </div>
-  </a>
-  <a href="/02_Daily_AI_News/2026-08/08-15 - 옥타, MCP 범위 설정으로 AI 에이전트 토큰 비용 절감 노려" class="card">
-    <div class="card-thumb">🛡️</div>
-    <div class="card-body">
-      <h3>옥타 MCP 범위 설정</h3>
-      <p>에이전트 보안과 토큰 비용을 함께 줄이는 접근</p>
-      <span class="card-tag">최신 글</span>
-    </div>
-  </a>
-</div>
+<div id="daily-ai-news-home"></div>
 
 ---
 
