@@ -1,7 +1,8 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
 import style from "../styles/listPage.scss"
-import { PageList, SortFn } from "../PageList"
+import thumbnailStyle from "../styles/thumbnailList.scss"
+import { PageList, SortFn, byDateAndAlphabeticalFolderFirst } from "../PageList"
 import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
 import { i18n } from "../../i18n"
@@ -9,6 +10,18 @@ import { QuartzPluginData } from "../../plugins/vfile"
 import { ComponentChildren } from "preact"
 import { concatenateResources } from "../../util/resources"
 import { trieFromAllFiles } from "../../util/ctx"
+import { resolveRelative } from "../../util/path"
+import { Date as DateComponent, getDate } from "../Date"
+
+// 썸네일 카드 그리드로 보여줄 섹션(폴더 slug 최상위 세그먼트)
+const THUMBNAIL_SECTIONS = new Set(["03_Books", "04_Movies", "05_Wine"])
+
+function resolveThumbnail(fromSlug: string, raw: unknown): string | undefined {
+  if (typeof raw !== "string" || raw.length === 0) return undefined
+  // 외부 URL / 루트 절대경로는 그대로, 그 외에는 현재 페이지 기준 상대경로로 해석
+  if (/^(https?:)?\/\//.test(raw) || raw.startsWith("/")) return raw
+  return resolveRelative(fromSlug as any, raw as any)
+}
 
 interface FolderContentOptions {
   /**
@@ -102,6 +115,47 @@ export default ((opts?: Partial<FolderContentOptions>) => {
         : htmlToJsx(fileData.filePath!, tree)
     ) as ComponentChildren
 
+    const section = fileData.slug?.split("/")[0] ?? ""
+    const useThumbnails = THUMBNAIL_SECTIONS.has(section)
+
+    const sorter = options.sort ?? byDateAndAlphabeticalFolderFirst(cfg)
+    const sortedPages = [...allPagesInFolder].sort(sorter)
+
+    const listing = useThumbnails ? (
+      <ul class="thumbnail-grid">
+        {sortedPages.map((page) => {
+          const title = page.frontmatter?.title ?? "제목 없음"
+          const href = resolveRelative(fileData.slug!, page.slug!)
+          const thumb = resolveThumbnail(fileData.slug!, page.frontmatter?.socialImage)
+          return (
+            <li>
+              <a href={href} class="thumbnail-card internal">
+                <div class="thumbnail-image">
+                  {thumb ? (
+                    <img src={thumb} alt={title} loading="lazy" />
+                  ) : (
+                    <div class="thumbnail-placeholder">
+                      <span>{title.trim().charAt(0)}</span>
+                    </div>
+                  )}
+                </div>
+                <div class="thumbnail-info">
+                  <h3>{title}</h3>
+                  {page.dates && (
+                    <p class="thumbnail-date">
+                      <DateComponent date={getDate(cfg, page)!} locale={cfg.locale} />
+                    </p>
+                  )}
+                </div>
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    ) : (
+      <PageList {...listProps} />
+    )
+
     return (
       <div class="popover-hint">
         <article class={classes}>{content}</article>
@@ -113,14 +167,12 @@ export default ((opts?: Partial<FolderContentOptions>) => {
               })}
             </p>
           )}
-          <div>
-            <PageList {...listProps} />
-          </div>
+          <div>{listing}</div>
         </div>
       </div>
     )
   }
 
-  FolderContent.css = concatenateResources(style, PageList.css)
+  FolderContent.css = concatenateResources(style, PageList.css, thumbnailStyle)
   return FolderContent
 }) satisfies QuartzComponentConstructor
