@@ -12,3 +12,6 @@ replit.nix
 
 content/99_Archives/2026/*
 content/99_Templates/*
+
+# TradingAgents: keep full reports local; allow monthly daily summaries in Git.
+/content/06_TradingAgents/**/보고서/
